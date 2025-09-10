@@ -1,5 +1,7 @@
 # DocuMCP
 
+![Image](https://github.com/user-attachments/assets/54276f4d-7836-4995-a29a-035fbe5ae97a)
+
 > **Intelligent Document Generation with Model Context Protocol (MCP)**
 
 DocuMCP is a powerful FastAPI-based document generation service that integrates seamlessly with Claude Desktop through the Model Context Protocol (MCP). Generate comprehensive project documentation including Product Requirements Documents (PRDs), project overviews, and README files using local LLM models via LM Studio.

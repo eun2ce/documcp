@@ -1,6 +1,6 @@
 # DocuMCP
 
-![Image](https://github.com/user-attachments/assets/54276f4d-7836-4995-a29a-035fbe5ae97a)
+![Image](./assets/example.gif){: width="80%" height="80%"}
 
 > **Intelligent Document Generation with Model Context Protocol (MCP)**
 

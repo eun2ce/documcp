@@ -1,0 +1,12 @@
+*.json
+
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.tox/
+.coverage
+.coverage.*
+.coverage.*.*

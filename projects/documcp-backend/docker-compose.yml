@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  documcp-backend:
+    build:
+      context: ../..
+      dockerfile: projects/documcp-backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DOCUMCP_MODE=production
+      - DOCUMCP_FASTAPI__TITLE=DocuMCP API
+      - DOCUMCP_FASTAPI__DESCRIPTION=Document generation API using Qwen3-4B-Instruct
+    volumes:
+      - model_cache:/root/.cache/huggingface
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+        reservations:
+          memory: 4G
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  model_cache:
+    driver: local
